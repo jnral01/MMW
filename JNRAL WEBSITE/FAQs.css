@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@600;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #0a0d14;
+  --primary-color-light: #20242f;
+  --secondary-color: #3fa246;
+  --extra-light: rgba(255, 255, 255, 0.5);
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Lisu Bosa", serif;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  text-align: center;
+}
+
+.section__subheader {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to top, white, transparent),
+  url("assets/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  height: 60px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+/* Slider */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: var(--white);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+      display: none;
+  }
+  .menu-button {
+      display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+      width: 100%;
+  }
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 160px;
+  line-height: 20px;
+  font-size: .8rem;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover a {
+  background-color: var(--secondary-color);
+}
+
+.dropdown a:hover {
+  background-color: var(--white);
+}
+
+.sidebar .dropdown-content {
+  position: static;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+}
+
+.sidebar .dropdown-content a {
+  padding: 12px 30px;
+}
+
+/* Optional: Adjust dropdown styles for small screens */
+@media (max-width: 800px) {
+  .main-nav .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 100%;
+  }
+
+  .main-nav .dropdown-content a {
+      padding: 12px 30px;
+  }
+}
+
+/* FAQs */
+.header_doctors {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+  .sub-header_doctors {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+#accordion {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+#accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for better appearance */
+}
+
+#accordion li label {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #3fa246;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+#accordion li label:hover {
+    color: lightgreen; /* Darker red on hover */
+}
+
+#accordion li label span {
+    transform: rotate(90deg);
+    font-size: 22px;
+    color: #333;
+    transition: transform 0.3s; /* Smooth rotation transition */
+}
+
+#accordion li input[type="radio"] {
+    display: none;
+}
+
+#accordion .content {
+    padding: 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+#accordion li input[type="radio"]:checked + .content {
+    max-height: 400px;
+    padding: 10px; /* Restore padding when expanded */
+}
+
+/* Rotate the arrow when accordion is open */
+#accordion li input[type="radio"]:checked + label span {
+    transform: rotate(-90deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #accordion {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    #accordion li label {
+        font-size: 16px;
+    }
+
+    #accordion li label span {
+        font-size: 20px;
+    }
+
+    .content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #accordion {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    #accordion li label {
+        font-size: 14px;
+    }
+
+    #accordion li label span {
+        font-size: 18px;
+    }
+
+    .content {
+        font-size: 13px;
+    }
+}
+
+
+
+
+/* footer starts */
+
+.footer__container {
+    text-align: center;
+  }
+  
+  .footer__container h4 {
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .footer__socials {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .footer__socials span a {
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .footer__socials span a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .footer__container p {
+    max-width: 600px;
+    color: black;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+  
+  .footer__nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer__link a {
+    font-weight: 500;
+    color: black;
+  }
+  
+  .footer__link a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .footer__bar {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid var(--extra-light);
+  }
+  
+  /* footer ends */
+
+  
+  
+
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px;  /* Distance from the right */
+  background-color: #4b4747d0; /* Background color of the button */
+  color: #fff; /* Color of the arrow */
+  border: none;
+  border-radius: 50%;
+  width: 50px; /* Width of the button */
+  height: 50px; /* Height of the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 20px; /* Size of the arrow icon */
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline */
+}
+
+.scroll-to-top:hover {
+  background-color: #efeaeaa4; /* Background color on hover */
+}
+
+.scroll-to-top i {
+  pointer-events: none; /* Prevents click events on the icon inside the button */
+}
+
+
+
+
+
